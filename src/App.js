@@ -6,6 +6,13 @@ function App() {
     <div className="App">
       <h1>Dictionary</h1>
       <Dictionary />
+
+      <footer>
+        <a href="https://github.com/natalie-maks/dictionary-app-react">
+          Open-source code
+        </a>
+        , by Natalia Maksymenko
+      </footer>
     </div>
   );
 }
