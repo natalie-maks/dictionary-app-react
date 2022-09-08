@@ -1,0 +1,30 @@
+.header {
+  display: block;
+  margin: 5vh auto;
+  padding: 20px;
+  width: 80vw;
+  background: radial-gradient(
+    circle at 10% 20%,
+    rgb(254, 255, 165) 0%,
+    rgb(255, 232, 182) 90%
+  );
+  border-radius: 15px;
+  text-align: center;
+}
+
+h1 {
+  font-family: "Fredoka One", cursive;
+  font-weight: 100;
+  font-size: 30px;
+}
+
+.Dictionary img {
+  max-width: 150px;
+}
+
+.Dictionary input {
+  width: 90%;
+  padding: 6px 15px;
+  border-radius: 20px;
+  border: 2px solid rgb(89, 35, 61);
+}
