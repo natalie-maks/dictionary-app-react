@@ -1,6 +1,6 @@
 .header {
   display: block;
-  margin: 5vh auto;
+  margin: 5vh auto 3vh;
   padding: 20px;
   width: 80vw;
   background: radial-gradient(
@@ -10,6 +10,7 @@
   );
   border-radius: 15px;
   text-align: center;
+  box-shadow: 0 5px 20px rgba(89, 35, 61, 0.2);
 }
 
 h1 {
@@ -23,8 +24,15 @@ h1 {
 }
 
 .Dictionary input {
-  width: 90%;
+  width: 75%;
   padding: 6px 15px;
   border-radius: 20px;
   border: 2px solid rgb(89, 35, 61);
+}
+
+.Dictionary button {
+  border-radius: 25px;
+  border: 2px solid rgb(89, 35, 61);
+  background: white;
+  padding: 6px 11px;
 }

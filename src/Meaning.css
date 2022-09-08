@@ -1,0 +1,27 @@
+.Meaning {
+  background: white;
+  display: block;
+  margin: 3vh auto;
+  padding: 25px;
+  width: 80vw;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(89, 35, 61, 0.2);
+}
+
+.Meaning h3 {
+  color: rgb(209, 113, 111);
+  margin: 0 0 25px;
+  line-height: 1;
+  font-size: 30px;
+}
+
+.Meaning p {
+  margin: 0 0 3px;
+  font-size: 18px;
+}
+
+.Meaning .definition {
+  margin: 25px 0;
+  padding-left: 14px;
+  border-left: 2px solid rgb(209, 113, 111);
+}

@@ -7,6 +7,9 @@ import "./Dictionary.css";
 import boyImg from "./dictionary-2.svg";
 import bookImg from "./dictionary-1.svg";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
+
 export default function Dictionary() {
   let [keyword, setKeyword] = useState("");
   let [results, setResults] = useState(null);
@@ -36,6 +39,9 @@ export default function Dictionary() {
             <h1>What word do you want to look up?</h1>
             <form className="mt-4" onSubmit={search}>
               <input type="search" onChange={handleKeywordChange} />
+              <button className="ms-2">
+                <FontAwesomeIcon icon={solid("magnifying-glass")} />
+              </button>
             </form>
           </div>
           <div className="col-3">
