@@ -1,0 +1,13 @@
+.Pictures {
+  background: white;
+  display: block;
+  margin: 3vh auto;
+  padding: 25px;
+  width: 80vw;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(89, 35, 61, 0.2);
+}
+
+.Pictures img {
+  border-radius: 10px;
+}

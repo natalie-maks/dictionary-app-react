@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 
 import Results from "./Results";
+import Pictures from "./Pictures";
 import "./Dictionary.css";
 
 import boyImg from "./dictionary-2.svg";
@@ -13,15 +14,29 @@ import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
 export default function Dictionary() {
   let [keyword, setKeyword] = useState("");
   let [results, setResults] = useState(null);
+  let [pictures, setPictures] = useState(null);
 
   function handleResponse(response) {
     setResults(response.data[0]);
+  }
+
+  function handlePexelsResponse(response) {
+    setPictures(response.data.photos);
   }
 
   function search(event) {
     event.preventDefault();
     let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${keyword}`;
     axios.get(apiUrl).then(handleResponse);
+
+    let pexelsApiKey = `563492ad6f91700001000001d86010f023d24497a79a926515b625a1`;
+    let pexelsApiUrl = `https://api.pexels.com/v1/search?query=${keyword}&per_page=6`;
+
+    axios
+      .get(pexelsApiUrl, {
+        headers: { Authorization: `Bearer ${pexelsApiKey}` },
+      })
+      .then(handlePexelsResponse);
   }
 
   function handleKeywordChange(event) {
@@ -50,6 +65,7 @@ export default function Dictionary() {
         </div>
       </div>
       <Results results={results} />
+      <Pictures pictures={pictures} />
     </div>
   );
 }
