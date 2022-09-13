@@ -77,7 +77,9 @@ export default function Dictionary() {
     return (
       <div className="Dictionary">
         <div className="hero">
-          <h1>Dictionary App</h1>
+          <h1>
+            Dictionary <span className="d-none d-sm-inline">App</span>
+          </h1>
           <form className="mt-4" onSubmit={search}>
             <input
               type="search"
