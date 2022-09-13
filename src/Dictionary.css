@@ -94,4 +94,8 @@ h1 {
   .hero input {
     max-width: 80vw;
   }
+
+  h1 {
+    font-size: 26px;
+  }
 }

@@ -48,10 +48,10 @@ export default function Dictionary() {
       <div className="Dictionary">
         <section className="header">
           <div className="row">
-            <div className="col-3">
+            <div className="d-none d-md-block col-md-3">
               <img src={boyImg} alt="boy" />
             </div>
-            <div className="col-6 mt-2">
+            <div className="col-md-6 mt-2">
               <h1>What word do you want to look up?</h1>
               <form className="mt-4" onSubmit={search}>
                 <input
@@ -64,7 +64,7 @@ export default function Dictionary() {
                 </button>
               </form>
             </div>
-            <div className="col-3">
+            <div className="d-none d-md-block col-md-3">
               <img src={bookImg} alt="books" />
             </div>
           </div>

@@ -13,23 +13,31 @@ export default function Phonetic(props) {
   console.log(props.phonetics);
   if (props.phonetics[0].audio) {
     return (
-      <div>
-        <p>{props.phonetics[0].text}</p>
-        <audio src={props.phonetics[0].audio} ref={audioEl}></audio>
-        <button className="play-btn" onClick={play}>
-          <FontAwesomeIcon icon={solid("play")} />
-        </button>
+      <div className="Phonetic">
+        <div className="d-inline-block">
+          <audio src={props.phonetics[0].audio} ref={audioEl}></audio>
+          <button className="play-btn" onClick={play}>
+            <FontAwesomeIcon icon={solid("play")} />
+          </button>
+        </div>
+        <div className="d-inline-block">
+          <p>{props.phonetics[0].text}</p>
+        </div>
       </div>
     );
   } else {
     if (props.phonetics[1].audio) {
       return (
-        <div>
-          <p>{props.phonetics[1].text}</p>
-          <audio src={props.phonetics[1].audio} ref={audioEl}></audio>
-          <button className="play-btn" onClick={play}>
-            <FontAwesomeIcon icon={solid("play")} />
-          </button>
+        <div className="Phonetic">
+          <div className="d-inline-block">
+            <audio src={props.phonetics[1].audio} ref={audioEl}></audio>
+            <button className="play-btn" onClick={play}>
+              <FontAwesomeIcon icon={solid("play")} />
+            </button>
+          </div>
+          <div className="d-inline-block ps-3">
+            <p>{props.phonetics[1].text}</p>
+          </div>
         </div>
       );
     } else {
