@@ -77,9 +77,9 @@ h1 {
 
 @media (max-width: 575px) {
   .hero {
-    margin: 1vh;
+    margin: 1.5vh;
     width: auto;
-    height: 98vh;
+    height: 93vh;
   }
 
   .hero h1 {
@@ -95,7 +95,57 @@ h1 {
     max-width: 80vw;
   }
 
+  section {
+    margin: 1.5vh auto;
+    padding: 25px;
+    width: 94vw;
+  }
+
+  .header {
+    margin: 3vh auto 1.5vh;
+  }
+}
+
+@media (max-width: 1360px) {
+  h1 {
+    font-size: 34px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .Dictionary input {
+    padding: 3px 15px;
+  }
+
+  .Dictionary button {
+    padding: 3px 11px;
+  }
+}
+
+@media (max-width: 991px) {
   h1 {
     font-size: 26px;
+  }
+
+  .hero {
+    margin: 2vh;
+    width: auto;
+    height: 93vh;
+  }
+
+  section {
+    margin: 1.5vh auto;
+    padding: 25px;
+    width: 94vw;
+  }
+
+  .header {
+    margin: 3vh auto 1.5vh;
+  }
+}
+
+@media (max-height: 574px) {
+  .hero img {
+    display: none;
   }
 }

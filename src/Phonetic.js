@@ -20,7 +20,7 @@ export default function Phonetic(props) {
             <FontAwesomeIcon icon={solid("play")} />
           </button>
         </div>
-        <div className="d-inline-block">
+        <div className="d-inline-block ps-3">
           <p>{props.phonetics[0].text}</p>
         </div>
       </div>

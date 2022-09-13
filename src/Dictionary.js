@@ -53,7 +53,7 @@ export default function Dictionary() {
             </div>
             <div className="col-md-6 mt-2">
               <h1>What word do you want to look up?</h1>
-              <form className="mt-4" onSubmit={search}>
+              <form className="mt-3 mt-lg-4" onSubmit={search}>
                 <input
                   type="search"
                   placeholder="Enter a word"
