@@ -5,7 +5,7 @@ import "./Pictures.css";
 export default function Pictures(props) {
   if (props.pictures) {
     return (
-      <div className="Pictures">
+      <section className="Pictures">
         <div className="row">
           {props.pictures.map(function (picture, index) {
             return (
@@ -19,7 +19,7 @@ export default function Pictures(props) {
             );
           })}
         </div>
-      </div>
+      </section>
     );
   } else {
     return null;

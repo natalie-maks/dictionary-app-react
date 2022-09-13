@@ -12,7 +12,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
 
 export default function Dictionary() {
-  let [keyword, setKeyword] = useState("");
+  let [keyword, setKeyword] = useState(null);
   let [results, setResults] = useState(null);
   let [pictures, setPictures] = useState(null);
 
@@ -43,29 +43,55 @@ export default function Dictionary() {
     setKeyword(event.target.value);
   }
 
-  return (
-    <div className="Dictionary">
-      <div className="header">
-        <div className="row">
-          <div className="col-3">
-            <img src={boyImg} alt="boy" />
+  if (results) {
+    return (
+      <div className="Dictionary">
+        <section className="header">
+          <div className="row">
+            <div className="col-3">
+              <img src={boyImg} alt="boy" />
+            </div>
+            <div className="col-6 mt-2">
+              <h1>What word do you want to look up?</h1>
+              <form className="mt-4" onSubmit={search}>
+                <input
+                  type="search"
+                  placeholder="Enter a word"
+                  onChange={handleKeywordChange}
+                />
+                <button className="ms-2">
+                  <FontAwesomeIcon icon={solid("magnifying-glass")} />
+                </button>
+              </form>
+            </div>
+            <div className="col-3">
+              <img src={bookImg} alt="books" />
+            </div>
           </div>
-          <div className="col-6 mt-2">
-            <h1>What word do you want to look up?</h1>
-            <form className="mt-4" onSubmit={search}>
-              <input type="search" onChange={handleKeywordChange} />
-              <button className="ms-2">
-                <FontAwesomeIcon icon={solid("magnifying-glass")} />
-              </button>
-            </form>
-          </div>
-          <div className="col-3">
-            <img src={bookImg} alt="books" />
-          </div>
+        </section>
+        <Results results={results} />
+        <Pictures pictures={pictures} />
+      </div>
+    );
+  } else {
+    return (
+      <div className="Dictionary">
+        <div className="hero">
+          <h1>Dictionary App</h1>
+          <form className="mt-4" onSubmit={search}>
+            <input
+              type="search"
+              placeholder="Enter a word"
+              onChange={handleKeywordChange}
+            />
+            <button className="ms-2">
+              <FontAwesomeIcon icon={solid("magnifying-glass")} />
+            </button>
+          </form>
+
+          <img src={boyImg} alt="boy" />
         </div>
       </div>
-      <Results results={results} />
-      <Pictures pictures={pictures} />
-    </div>
-  );
+    );
+  }
 }

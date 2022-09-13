@@ -1,15 +1,53 @@
 .header {
-  display: block;
   margin: 5vh auto 3vh;
   padding: 20px;
-  width: 80vw;
   background: radial-gradient(
     circle at 10% 20%,
     rgb(254, 255, 165) 0%,
     rgb(255, 232, 182) 90%
   );
-  border-radius: 15px;
   text-align: center;
+}
+
+.hero {
+  width: 80vw;
+  height: 90vh;
+  margin: 5vh auto 3vh;
+  padding: 20px;
+  background: radial-gradient(
+    circle at 10% 20%,
+    rgb(254, 255, 165) 0%,
+    rgb(255, 232, 182) 90%
+  );
+  text-align: center;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(89, 35, 61, 0.2);
+}
+
+.hero img {
+  max-height: 30vh;
+}
+
+.hero input {
+  max-width: 55%;
+}
+
+.hero h1 {
+  font-size: 62px;
+  padding-top: 22vh;
+}
+
+.hero form {
+  padding-bottom: 6vh;
+}
+
+section {
+  background: white;
+  display: block;
+  margin: 3vh auto;
+  padding: 25px;
+  width: 80vw;
+  border-radius: 15px;
   box-shadow: 0 5px 20px rgba(89, 35, 61, 0.2);
 }
 
