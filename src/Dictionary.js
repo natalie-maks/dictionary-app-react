@@ -44,7 +44,6 @@ export default function Dictionary() {
   }
 
   function handleSynonymClick(e) {
-    setKeyword(e.target.innerText);
     let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${e.target.innerText}`;
     axios.get(apiUrl).then(handleResponse);
 
@@ -56,6 +55,7 @@ export default function Dictionary() {
         headers: { Authorization: `Bearer ${pexelsApiKey}` },
       })
       .then(handlePexelsResponse);
+    window.scrollTo(0, 0);
   }
 
   if (results) {
