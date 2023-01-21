@@ -1,17 +1,17 @@
 import React from "react";
+import { v1 as uuidv1 } from "uuid";
+
 import Example from "./Example";
 import Synonyms from "./Synonyms";
 
-import "./Meaning.css";
-
 export default function Meaning(props) {
   return (
-    <div className="Meaning">
-      <h3>{props.meaning.partOfSpeech}</h3>
+    <section className="Meaning">
+      <h2>{props.meaning.partOfSpeech}</h2>
 
-      {props.meaning.definitions.map(function (definition, index) {
+      {props.meaning.definitions.map(function (definition) {
         return (
-          <div className="definition" key={index}>
+          <div className="definition" key={uuidv1()}>
             <p>{definition.definition}</p>
 
             <Example example={definition.example} />
@@ -20,6 +20,6 @@ export default function Meaning(props) {
       })}
 
       <Synonyms synonyms={props.meaning.synonyms} />
-    </div>
+    </section>
   );
 }

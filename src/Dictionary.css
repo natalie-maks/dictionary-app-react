@@ -16,7 +16,7 @@
 
 .Dictionary input {
   width: 75%;
-  padding: 6px 15px;
+  padding: 4px 16px;
   border-radius: 24px;
   height: 40px;
   border: 2px solid rgb(89, 35, 61);
@@ -33,7 +33,6 @@
 
 .Dictionary .hero {
   width: auto;
-  max-width: 1200px;
   margin: 0 auto;
   height: 92svh;
   padding: 20px;
@@ -50,6 +49,7 @@
 }
 
 .Dictionary .hero h1 {
+  font-family: "Fredoka One", cursive;
   font-size: 48px;
   margin-bottom: 0;
   align-self: flex-end;
@@ -59,7 +59,7 @@
   align-self: center;
 }
 
-.hero img {
+.Dictionary .hero img {
   max-height: 30vh;
   margin: 0 auto;
 }
@@ -79,7 +79,7 @@ section.Pictures {
   margin-bottom: 0;
 }
 
-.header {
+.Dictionary .header {
   padding: 20px;
   background: radial-gradient(
     circle at 10% 20%,
@@ -90,15 +90,61 @@ section.Pictures {
   width: 100%;
 }
 
-h1 {
+.Dictionary .header p {
   font-family: "Fredoka One", cursive;
   font-weight: 100;
-  font-size: 30px;
+  font-size: 32px;
+  line-height: 1.2;
   margin-bottom: 0;
 }
 
-.header img {
+.Dictionary .header img {
   max-width: 150px;
+}
+
+.Word h1 {
+  font-family: "Fredoka One", cursive;
+  font-weight: 100;
+  font-size: 32px;
+  color: rgb(89, 35, 61);
+}
+
+.Meaning h2 {
+  color: rgb(209, 113, 111);
+  margin-bottom: 24px;
+  line-height: 1;
+  font-size: 24px;
+}
+
+.Meaning p {
+  margin-bottom: 4px;
+  font-size: 16px;
+}
+
+.Meaning .definition {
+  margin: 24px 0;
+  padding-left: 16px;
+  border-left: 2px solid rgb(209, 113, 111);
+}
+
+.Meaning p.Example {
+  font-size: 16px;
+  font-style: italic;
+}
+
+.Synonyms {
+  padding: 0;
+  margin: 0;
+  margin-top: 12px;
+}
+
+.Synonyms li {
+  display: inline-block;
+  padding: 4px 16px;
+  border: 1px solid rgb(89, 35, 61);
+  border-radius: 20px;
+  margin-top: 12px;
+  margin-right: 12px;
 }
 
 .Pictures img {
@@ -123,9 +169,59 @@ h1 {
   }
 }
 
+@media (min-width: 768px) {
+  .Meaning h2 {
+    font-size: 32px;
+  }
+  .Meaning p {
+    font-size: 18px;
+  }
+
+  .Meaning p.Example {
+    font-size: 18px;
+  }
+}
+
 @media (min-width: 992px) {
   .Dictionary .hero form {
     max-width: 924px;
     margin: 0 auto;
   }
-} ;
+}
+
+@media (min-width: 1200px) {
+  .Dictionary .hero {
+    width: 90%;
+  }
+
+  .Dictionary .hero h1 {
+    font-size: 56px;
+  }
+
+  section {
+    margin: 0 auto 20px;
+  }
+
+  .Word h1 {
+    font-size: 40px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .Dictionary input {
+    height: 48px;
+    font-size: 20px;
+  }
+
+  .Dictionary button {
+    height: 48px;
+    width: 48px;
+  }
+
+  .Meaning p {
+    font-size: 20px;
+  }
+  .Meaning p.Example {
+    font-size: 18px;
+  }
+}

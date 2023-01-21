@@ -52,7 +52,7 @@ export default function Dictionary() {
               <img src={boyImg} alt="boy" />
             </div>
             <div className="col-md-6 mt-2">
-              <h1>What word do you want to look up?</h1>
+              <p>What word do you want to look up?</p>
               <form className="mt-3 mt-lg-4" onSubmit={search}>
                 <input
                   type="search"
