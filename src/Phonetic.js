@@ -10,7 +10,6 @@ export default function Phonetic(props) {
     audioEl.current.play();
   }
 
-  console.log(props.phonetics);
   if (props.phonetics[0].audio) {
     return (
       <div className="Phonetic">
@@ -25,7 +24,7 @@ export default function Phonetic(props) {
         </div>
       </div>
     );
-  } else {
+  } else if (props.phonetics[1]) {
     if (props.phonetics[1].audio) {
       return (
         <div className="Phonetic">
@@ -43,5 +42,7 @@ export default function Phonetic(props) {
     } else {
       return <p>{props.phonetics[0].text}</p>;
     }
+  } else {
+    return <p>{props.phonetics[0].text}</p>;
   }
 }

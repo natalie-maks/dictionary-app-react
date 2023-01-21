@@ -145,6 +145,7 @@ section.Pictures {
   border-radius: 20px;
   margin-top: 12px;
   margin-right: 12px;
+  cursor: pointer;
 }
 
 .Pictures img {

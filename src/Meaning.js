@@ -19,7 +19,7 @@ export default function Meaning(props) {
         );
       })}
 
-      <Synonyms synonyms={props.meaning.synonyms} />
+      <Synonyms synonyms={props.meaning.synonyms} click={props.click} />
     </section>
   );
 }

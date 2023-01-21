@@ -11,7 +11,9 @@ export default function Results(props) {
         <Word results={props.results} />
 
         {props.results.meanings.map(function (meaning) {
-          return <Meaning key={uuidv1()} meaning={meaning} />;
+          return (
+            <Meaning key={uuidv1()} meaning={meaning} click={props.click} />
+          );
         })}
       </div>
     );
