@@ -1,18 +1,1 @@
-body {
-  background: radial-gradient(
-    circle at 10% 20%,
-    rgb(244, 208, 111) 0%,
-    rgb(209, 113, 111) 90%
-  );
-}
 
-footer {
-  color: #fff;
-  text-align: center;
-  font-family: monospace;
-  padding: 2vh 0 3vh;
-}
-
-footer a {
-  color: #fff;
-}

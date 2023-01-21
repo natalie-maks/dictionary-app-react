@@ -1,18 +1,41 @@
-.header {
-  margin: 5vh auto 3vh;
-  padding: 20px;
+.Dictionary {
   background: radial-gradient(
     circle at 10% 20%,
-    rgb(254, 255, 165) 0%,
-    rgb(255, 232, 182) 90%
+    rgb(244, 208, 111) 0%,
+    rgb(209, 113, 111) 90%
   );
-  text-align: center;
+
+  padding-block: 4svh;
+  padding-inline: 16px;
+  min-height: 100svh;
 }
 
-.hero {
-  width: 80vw;
-  height: 90vh;
-  margin: 5vh auto 3vh;
+.Dictionary form {
+  width: 100%;
+}
+
+.Dictionary input {
+  width: 75%;
+  padding: 6px 15px;
+  border-radius: 24px;
+  height: 40px;
+  border: 2px solid rgb(89, 35, 61);
+}
+
+.Dictionary button {
+  border-radius: 50%;
+  border: 2px solid rgb(89, 35, 61);
+  background: white;
+  height: 40px;
+  width: 40px;
+  font-size: 16px;
+}
+
+.Dictionary .hero {
+  width: auto;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 92svh;
   padding: 20px;
   background: radial-gradient(
     circle at 10% 20%,
@@ -20,132 +43,89 @@
     rgb(255, 232, 182) 90%
   );
   text-align: center;
-  border-radius: 15px;
-  box-shadow: 0 5px 20px rgba(89, 35, 61, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(89, 35, 61, 0.2);
+  display: grid;
+  grid-template-rows: 40% 20% 40%;
+}
+
+.Dictionary .hero h1 {
+  font-size: 48px;
+  margin-bottom: 0;
+  align-self: flex-end;
+}
+
+.Dictionary .hero form {
+  align-self: center;
 }
 
 .hero img {
   max-height: 30vh;
-}
-
-.hero input {
-  max-width: 55%;
-}
-
-.hero h1 {
-  font-size: 62px;
-  padding-top: 22vh;
-}
-
-.hero form {
-  padding-bottom: 6vh;
+  margin: 0 auto;
 }
 
 section {
   background: white;
   display: block;
-  margin: 3vh auto;
-  padding: 25px;
-  width: 80vw;
-  border-radius: 15px;
-  box-shadow: 0 5px 20px rgba(89, 35, 61, 0.2);
+  margin-bottom: 20px;
+  padding: 24px;
+  width: 100%;
+  max-width: 1200px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(89, 35, 61, 0.2);
+}
+
+section.Pictures {
+  margin-bottom: 0;
+}
+
+.header {
+  padding: 20px;
+  background: radial-gradient(
+    circle at 10% 20%,
+    rgb(254, 255, 165) 0%,
+    rgb(255, 232, 182) 90%
+  );
+  text-align: center;
+  width: 100%;
 }
 
 h1 {
   font-family: "Fredoka One", cursive;
   font-weight: 100;
   font-size: 30px;
+  margin-bottom: 0;
 }
 
 .header img {
   max-width: 150px;
 }
 
-.Dictionary input {
-  width: 75%;
-  padding: 6px 15px;
-  border-radius: 20px;
-  border: 2px solid rgb(89, 35, 61);
+.Pictures img {
+  border-radius: 12px;
 }
 
-.Dictionary button {
-  border-radius: 25px;
-  border: 2px solid rgb(89, 35, 61);
-  background: white;
-  padding: 6px 11px;
-}
-
-@media (max-width: 575px) {
-  .hero {
-    margin: 1.5vh;
-    width: auto;
-    height: 93vh;
+@media (min-width: 640px) and (max-height: 576px) {
+  .Dictionary .hero {
+    grid-template-rows: 50%;
   }
 
-  .hero h1 {
-    font-size: 55px;
-    padding-bottom: 5vh;
+  .Dictionary .hero h1 {
+    margin-bottom: 20px;
   }
 
-  .hero form {
-    padding-bottom: 13vh;
+  .Dictionary .hero form {
+    align-self: flex-start;
   }
 
-  .hero input {
-    max-width: 80vw;
-  }
-
-  section {
-    margin: 1.5vh auto;
-    padding: 25px;
-    width: 94vw;
-  }
-
-  .header {
-    margin: 3vh auto 1.5vh;
-  }
-}
-
-@media (max-width: 1360px) {
-  h1 {
-    font-size: 34px;
-  }
-}
-
-@media (max-width: 1200px) {
-  .Dictionary input {
-    padding: 3px 15px;
-  }
-
-  .Dictionary button {
-    padding: 3px 11px;
-  }
-}
-
-@media (max-width: 991px) {
-  h1 {
-    font-size: 26px;
-  }
-
-  .hero {
-    margin: 2vh;
-    width: auto;
-    height: 93vh;
-  }
-
-  section {
-    margin: 1.5vh auto;
-    padding: 25px;
-    width: 94vw;
-  }
-
-  .header {
-    margin: 3vh auto 1.5vh;
-  }
-}
-
-@media (max-height: 574px) {
-  .hero img {
+  .Dictionary .hero img {
     display: none;
   }
 }
+
+@media (min-width: 992px) {
+  .Dictionary .hero form {
+    max-width: 924px;
+    margin: 0 auto;
+  }
+} ;

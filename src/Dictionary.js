@@ -77,10 +77,8 @@ export default function Dictionary() {
     return (
       <div className="Dictionary">
         <div className="hero">
-          <h1>
-            Dictionary <span className="d-none d-sm-inline">App</span>
-          </h1>
-          <form className="mt-4" onSubmit={search}>
+          <h1>English Dictionary</h1>
+          <form onSubmit={search}>
             <input
               type="search"
               placeholder="Enter a word"
