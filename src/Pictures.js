@@ -2,7 +2,7 @@ import React from "react";
 import { v1 as uuidv1 } from "uuid";
 
 export default function Pictures(props) {
-  if (props.pictures) {
+  if (props.pictures.length === 6) {
     return (
       <section className="Pictures">
         <div className="row">

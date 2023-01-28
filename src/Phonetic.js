@@ -10,39 +10,43 @@ export default function Phonetic(props) {
     audioEl.current.play();
   }
 
-  if (props.phonetics[0].audio) {
-    return (
-      <div className="Phonetic">
-        <div className="d-inline-block">
-          <audio src={props.phonetics[0].audio} ref={audioEl}></audio>
-          <button className="play-btn" onClick={play}>
-            <FontAwesomeIcon icon={solid("play")} />
-          </button>
-        </div>
-        <div className="d-inline-block ps-3">
-          <p>{props.phonetics[0].text}</p>
-        </div>
-      </div>
-    );
-  } else if (props.phonetics[1]) {
-    if (props.phonetics[1].audio) {
+  if (props.phonetics.length > 0) {
+    if (props.phonetics[0].audio) {
       return (
         <div className="Phonetic">
           <div className="d-inline-block">
-            <audio src={props.phonetics[1].audio} ref={audioEl}></audio>
+            <audio src={props.phonetics[0].audio} ref={audioEl}></audio>
             <button className="play-btn" onClick={play}>
               <FontAwesomeIcon icon={solid("play")} />
             </button>
           </div>
           <div className="d-inline-block ps-3">
-            <p>{props.phonetics[1].text}</p>
+            <p>{props.phonetics[0].text}</p>
           </div>
         </div>
       );
+    } else if (props.phonetics[1]) {
+      if (props.phonetics[1].audio) {
+        return (
+          <div className="Phonetic">
+            <div className="d-inline-block">
+              <audio src={props.phonetics[1].audio} ref={audioEl}></audio>
+              <button className="play-btn" onClick={play}>
+                <FontAwesomeIcon icon={solid("play")} />
+              </button>
+            </div>
+            <div className="d-inline-block ps-3">
+              <p>{props.phonetics[1].text}</p>
+            </div>
+          </div>
+        );
+      } else {
+        return <p>{props.phonetics[0].text}</p>;
+      }
     } else {
       return <p>{props.phonetics[0].text}</p>;
     }
   } else {
-    return <p>{props.phonetics[0].text}</p>;
+    return null;
   }
 }
